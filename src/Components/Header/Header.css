@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+img{
+    height: 5em;
+    width: 5em;
+    border-radius: 10em;
+    margin-top: 0.8em;
+}
+
+h1{
+    color: white;
+    font-size: 2.4em;
+    margin-top: 0.7em;
+}
