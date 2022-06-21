@@ -1,6 +1,6 @@
 import logo from "../../assets/logo.jpg"
 import "./Header.css"
-import NavBar from "../Header/NavBar"
+import NavBar from "./NavBar/NavBar"
 
 const Header = () => {
     return (
