@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className='App'>
     <Header />
-    <ItemListContainer greeting="bienvenido a mi pagina"/>
+    <ItemListContainer greeting="Welcome to my clothing website"/>
     </div>
   );
 }

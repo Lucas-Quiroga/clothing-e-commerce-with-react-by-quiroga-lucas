@@ -1,0 +1,23 @@
+
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+    #spanLanding{
+    justify-content: center;
+    padding-top: 40vh;
+    font-size: 2em;
+    font-weight: bold;
+  text-align: center;
+  color: lightblue;
+   -webkit-animation: changeColor 80s ease-in infinite;
+   animation: changeColor 3s ease-in infinite;
+  }
+
+  @keyframes changeColor{
+    0% {color: lightblue;}
+    50% {color: lightgray}
+    100% {color: lightslategray}
+  }

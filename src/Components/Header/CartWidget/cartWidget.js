@@ -7,6 +7,9 @@ const CartWidget = () =>{
     return (
         <div className="divCart">
        <button className="cart-btn" alt="cart-icon"><FontAwesomeIcon icon={faCartShopping} /></button>
+       <div className="buttonNumber">
+        <span className="buttonNumber_badge">0</span>
+       </div>
         </div>
     )
 }

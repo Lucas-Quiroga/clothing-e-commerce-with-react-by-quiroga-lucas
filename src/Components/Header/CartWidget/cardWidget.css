@@ -13,3 +13,18 @@
     color: white;
     background-color: black;
 }
+
+.buttonNumber{
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 10em;
+    /* margin-top: 9em; */
+    background-color: red;
+    top: 1.9em;
+    right: 0.3em;
+    position: relative;
+}
+
+.buttonNumber_badge{
+    color: wheat;
+}
