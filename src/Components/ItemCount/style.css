@@ -1,0 +1,25 @@
+.componentCount{
+    position: relative;
+    margin:  15em 45%;
+    border: 2px solid black;
+    height: 9em;
+    width: 14em;
+    justify-content: center;
+    text-align: center;
+}
+
+
+._divChildren{
+    display: flex;
+    justify-content: space-evenly;
+    width: 15vh;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.btn-add{
+    margin-top: 10px;
+    width: 10vh;
+    border-radius:10px;
+    outline:none;
+}
