@@ -1,0 +1,21 @@
+.divItemList{
+    display: flex;
+    position: relative;
+    bottom: 1em;
+    justify-content: center;
+}
+
+.btn-act{
+    height: 2em;
+    justify-content: center;
+    position: fixed;
+    left: 47%;
+    bottom: 50%;
+}
+
+.mapStyle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}

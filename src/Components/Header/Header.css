@@ -12,7 +12,7 @@ header{
     text-align: center;
 }
 
-img{
+.logo_header{
     height: 5em;
     width: 5em;
     border-radius: 10em;

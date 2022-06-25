@@ -6,6 +6,7 @@
     width: 14em;
     justify-content: center;
     text-align: center;
+    left: 300em; /*para ocultar por tiempo breve*/
 }
 
 

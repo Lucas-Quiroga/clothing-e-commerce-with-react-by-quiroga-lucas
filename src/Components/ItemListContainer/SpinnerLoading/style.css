@@ -1,0 +1,9 @@
+.spinner{
+    height: 50%;
+    width: 50%;
+    padding-top: 20em;
+    justify-content: center;
+    text-align: center;
+    left: 33em;
+    position: relative;
+}

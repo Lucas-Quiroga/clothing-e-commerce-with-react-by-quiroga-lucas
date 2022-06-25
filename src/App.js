@@ -1,7 +1,7 @@
 import './App.css';
 // COMPONENTES
 import Header from "./Components/Header/Header"
-import ItemListContainer from './Components/ItemListContainer';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import ItemCount from "./Components/ItemCount"
 import { useState } from 'react';
 

@@ -1,13 +1,14 @@
 
 .landing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   }
 
     #spanLanding{
     justify-content: center;
-    padding-top: 10vh;
+    top: 2em;
+    position: relative;
     font-size: 2em;
     font-weight: bold;
   text-align: center;
