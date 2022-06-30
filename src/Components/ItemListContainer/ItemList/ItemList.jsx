@@ -2,9 +2,8 @@ import React from "react";
 import Item from "./Item/Item";
 import "./ItemList.css"
 import Loading from "../SpinnerLoading/SpinnerLoading";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 
-//function the spinner with settimeout
 
 const ItemList=({ clothing })=>{
 
@@ -20,8 +19,6 @@ const ItemList=({ clothing })=>{
         },3000);
     }
    
-    
-    //condicion spinner
     if(loading){
         return(
         <Loading />
@@ -31,10 +28,11 @@ const ItemList=({ clothing })=>{
         <div className="divItemList">
         <button className="btn-act" onClick={()=>changeState()}>Show / Hide</button>
         {show 
-        ? <div className="mapStyle">
+        ? <div className="mapStyle"> 
         {clothing.map((resp) => <Item key={resp.id} item={resp}/>)}
         </div>
-        : console.log("error")}
+        : console.log("error")} 
+        
         </div>
     )
 }

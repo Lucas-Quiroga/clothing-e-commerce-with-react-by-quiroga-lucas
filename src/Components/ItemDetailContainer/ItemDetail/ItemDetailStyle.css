@@ -1,0 +1,24 @@
+.detailObjContainer{
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    margin: 10px 25em;
+    position: relative;
+    top: 10em;
+}
+
+.detailObjChildren{
+    justify-content: center;
+    text-align: center;
+    padding: 8em 5em;
+}
+
+.spinerC{
+    height: 50%;
+    width: 50%;
+    margin-top: 20em;
+    justify-content: center;
+    text-align: center;
+    left: 33em;
+    position: relative;
+}

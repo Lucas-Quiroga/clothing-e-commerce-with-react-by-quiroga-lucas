@@ -1,12 +1,12 @@
 .componentCount{
     position: relative;
-    margin:  15em 45%;
+    /* margin:  15em 45%; */
     border: 2px solid black;
     height: 9em;
     width: 14em;
     justify-content: center;
     text-align: center;
-    left: 300em; /*para ocultar por tiempo breve*/
+    margin: 0 auto;
 }
 
 

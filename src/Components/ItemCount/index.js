@@ -10,7 +10,7 @@ const ItemCount = ({stock,intial,onadd}) =>{
         if(result<=stock && result >=1){
         setValue(value+assignment)
     } else {
-        alert("you can't adnpd/remove more products")
+        alert("you can't add/remove more products")
     }
     }
 

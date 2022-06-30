@@ -1,6 +1,6 @@
 import React from "react";
 import "./Item.css"
-import count from "../../../ItemCount/index"
+// import count from "../../../ItemCount/index"
 
 
 const Item=({ item })=>{
@@ -13,7 +13,7 @@ const Item=({ item })=>{
             <h4 key={item.id}>ID: {item.id}</h4>
             <button>More details</button>
             <h3>Stock: {item.stock}</h3>
-            <count />
+            {/* <count /> */}
         </div>
     )
 }
