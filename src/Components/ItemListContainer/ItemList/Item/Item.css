@@ -11,5 +11,14 @@
   }
 
   .card{
-    margin: 10em;
+    margin: 3em 1em;
+  }
+
+  .card-title{
+    font-size: 1em;
+  }
+
+  .card-img{
+    width: 400px;
+    height: 400px;
   }

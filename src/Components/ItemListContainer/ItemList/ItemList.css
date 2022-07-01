@@ -5,17 +5,18 @@
     justify-content: center;
 }
 
-.btn-act{
-    height: 2em;
+.spinerItemList{
+    height: 50%;
+    width: 50%;
+    margin-top: 20em;
     justify-content: center;
-    position: fixed;
-    left: 47%;
-    bottom: 50%;
+    text-align: center;
+    left: 33em;
+    position: relative;
 }
 
 .mapStyle{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
