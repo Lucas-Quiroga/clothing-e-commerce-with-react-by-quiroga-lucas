@@ -10,7 +10,7 @@
 .detailObjChildren{
     justify-content: center;
     text-align: center;
-    padding: 8em 5em;
+    padding: 7em 5em;
 }
 
 .spinerC{
@@ -21,4 +21,21 @@
     text-align: center;
     left: 33em;
     position: relative;
+}
+
+#aStyle{
+
+  outline: none;
+  text-decoration: underline;
+  display: inline-block;
+  width: 50%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 1;
+  color: black;
+  padding-top: 3em;
+}
+
+#aStyle:hover{
+    color: red;
 }

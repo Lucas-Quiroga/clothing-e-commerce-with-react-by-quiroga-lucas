@@ -12,7 +12,7 @@ const Item=({ item })=>{
             <h4>Price: {item.price}</h4>
             <h4 key={item.id}>ID: {item.id}</h4>
             <Link to={`/detail/${item.id}`}>
-            <button>More details</button>
+            <button id="btn-moreDetails" class="action-button">More details</button>
             </Link>
             <h3>Stock: {item.stock}</h3>
         </div>

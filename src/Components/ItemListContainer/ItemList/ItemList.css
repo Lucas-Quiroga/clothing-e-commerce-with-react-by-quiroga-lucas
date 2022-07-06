@@ -15,8 +15,28 @@
     position: relative;
 }
 
-.mapStyle{
-    display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
+.mapStyle {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #btn-moreDetails{
+  cursor: pointer;
+  min-width: 150px;
+  padding: 10px 5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background: black;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(8, 8, 8);
+  transition: all 1s;
+  }
+
+  #btn-moreDetails:hover{
+    text-decoration: underline white 1px;
+  }

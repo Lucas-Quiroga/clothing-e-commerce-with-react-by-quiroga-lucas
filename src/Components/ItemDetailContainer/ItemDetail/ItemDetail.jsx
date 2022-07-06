@@ -1,12 +1,13 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ItemCount from "../../ItemCount/index"
 import "./ItemDetailStyle.css"
 import { ClipLoader } from "react-spinners";
+import { Link } from "react-router-dom" 
 
 const ItemDetail=({ clothesObject} )=>{
 
+    const [cart, setCart] = useState(false)
     const [loading, setLoading] = useState(false)
     useEffect(() =>{
         setLoading(true)
@@ -16,7 +17,7 @@ const ItemDetail=({ clothesObject} )=>{
     },[])
 
     const onadd=(value)=>{
-    alert(`Adding ${value} products`)
+    setCart(true)
    }
 
     return(
@@ -34,9 +35,13 @@ const ItemDetail=({ clothesObject} )=>{
                      <h3>{clothesObject.title}</h3>
                  <h4>Price: {clothesObject.price}</h4>
                 <h4>Description: {clothesObject.features}</h4>
-                <ItemCount intial={1} stock={clothesObject.stock} onadd={onadd}/>
-                </div>
+                {
+                    cart
+                    ? <Link id="aStyle" to={"/cart"}>Go to cart</Link>
+                    : <ItemCount intial={1} stock={clothesObject.stock} onadd={onadd}/>
+                }   
                 
+                </div>
             </div>
 }
             </div>
