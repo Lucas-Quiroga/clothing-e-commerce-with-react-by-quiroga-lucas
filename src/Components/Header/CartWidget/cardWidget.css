@@ -6,6 +6,17 @@
     display: flex;
 }
 
+#i_cart{
+    padding-top: 1.8em;
+    z-index: 100;
+}
+
+.spanWidget{
+    color:white;
+    position: inherit;
+    top: 0.1em;
+}
+
 .cart-btn{
     outline: none;
     border-radius: 10px;
@@ -21,7 +32,6 @@
     /* margin-top: 9em; */
     background-color: red;
     top: 1.9em;
-    right: 0.3em;
     position: relative;
 }
 

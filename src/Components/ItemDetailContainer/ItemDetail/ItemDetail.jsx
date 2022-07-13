@@ -17,9 +17,9 @@ const ItemDetail = ({ clothesObject }) => {
     }, 2000);
   }, []);
 
-  const onadd = (quantity) => {
+  const onadd = (quantityToAdd) => {
     setCart(true);
-    addItem(clothesObject, quantity);
+    addItem({ quantity: quantityToAdd, ...clothesObject });
   };
 
   return (
@@ -37,9 +37,14 @@ const ItemDetail = ({ clothesObject }) => {
             <h4>Price: {clothesObject.price}</h4>
             <h4>Description: {clothesObject.features}</h4>
             {cart ? (
-              <Link id="aStyle" to={"/cart"}>
-                Go to cart
-              </Link>
+              <>
+                <Link className="aStyle" to={"/cart"}>
+                  Go to cart
+                </Link>
+                <Link id="aStyle" to={"/"}>
+                  Return to catalog
+                </Link>
+              </>
             ) : (
               <ItemCount intial={1} stock={clothesObject.stock} onadd={onadd} />
             )}

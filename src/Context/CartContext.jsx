@@ -16,16 +16,40 @@ const CartProvider = ({ children }) => {
   };
 
   const removeItem = (id) => {
-    setCart(cart.filter((prod) => prod.id !== id));
+    const itemIndex = cart.findIndex((item) => item.id === id);
+    if (cart[itemIndex].quantity === 1) {
+      setCart(cart.filter((i) => i.id !== id));
+    } else {
+      setCart(
+        cart.map((p) => (p.id === id ? { ...p, quantity: p.quantity - 1 } : p))
+      );
+    }
   };
 
-  const addItem = (item, newQuantity) => {
-    const newCart = cart.filter((prod) => prod.id !== item.id);
-    newCart.push({ ...item, quantity: newQuantity });
-    setCart(newCart);
+  const addItem = (product) => {
+    const itemIndex = cart.findIndex((item) => item.id === product.id);
+    if (itemIndex !== -1) {
+      setCart(
+        cart.map((p) =>
+          p.id === product.id
+            ? { ...p, quantity: p.quantity + product.quantity }
+            : p
+        )
+      );
+    } else {
+      setCart([product, ...cart]);
+    }
   };
 
-  console.log("cart: ", cart);
+  const totalPrice = () => {
+    return cart.reduce((acc, b) => acc + b.quantity * b.price, 0);
+  };
+
+  const totalProduct = () => {
+    return cart.reduce((total, value) => {
+      return total + value.quantity;
+    }, 0);
+  };
 
   return (
     <Provider
@@ -34,6 +58,9 @@ const CartProvider = ({ children }) => {
         isInCart,
         removeItem,
         addItem,
+        totalPrice,
+        totalProduct,
+        cart,
       }}
     >
       {children}

@@ -2,15 +2,17 @@ import React from "react";
 import "./cardWidget.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { CartContext } from "../../../Context/CartContext";
 
 const CartWidget = () => {
+  const { totalProduct } = CartContext();
   return (
     <div className="divCart">
-      <button className="cart-btn" alt="cart-icon">
-        <FontAwesomeIcon icon={faCartShopping} />
-      </button>
+      <i className="cart-btn" alt="cart-icon">
+        <FontAwesomeIcon id="i_cart" icon={faCartShopping} />
+      </i>
       <div className="buttonNumber">
-        <span className="buttonNumber_badge">0</span>
+        <span className="spanWidget">{totalProduct() || ""}</span>
       </div>
     </div>
   );
