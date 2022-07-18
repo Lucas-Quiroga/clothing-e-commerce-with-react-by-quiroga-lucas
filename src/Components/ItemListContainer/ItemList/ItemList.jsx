@@ -3,7 +3,7 @@ import Item from "./Item/Item";
 import "./ItemList.css";
 // import Loading from "../SpinnerLoading/SpinnerLoading";
 // import { ClipLoader } from "react-spinners";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 const ItemList = ({ clothing }) => {
   //states
