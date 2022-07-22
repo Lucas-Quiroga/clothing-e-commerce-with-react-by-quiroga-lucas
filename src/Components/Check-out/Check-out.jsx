@@ -47,10 +47,9 @@ const CheckOut = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(user);
+    console.log("Buyer: " + user);
   };
 
-  // console.log("el codigo guardado es: " + idUser);
   return (
     <div className="checkout-container">
       {active ? (
@@ -131,7 +130,6 @@ const CheckOut = () => {
               <br />
               <br />[{idUser}]
             </p>
-            <button onClick={openModal}>close</button>
             <Link to={"/"}>Back</Link>
           </div>
         </div>
