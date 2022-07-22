@@ -1,0 +1,74 @@
+.box-model{
+    /* margin-top: 50%;
+    padding: 0;
+    background-color: red;
+    position: absolute; */
+}
+
+
+
+.checkout-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    /* padding: 1em; */
+    margin: 3em;
+    
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.form-field {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    
+}
+
+.items-start {
+    align-items: flex-start;
+    
+}
+
+.modalOpen{
+    justify-content: center;
+    margin: 10em auto;
+    height: 25em;
+    width: 50em;
+    margin-top: 10em;
+    border: none;
+    border-radius: 100px;
+    background: white;
+    color: black;
+}
+
+#pLorem{
+    text-align: center;
+    font-size: 1.7em;
+    padding-top: 0.5em;
+}
+
+.h3Modal{
+    color: red;
+    padding-top: 3em;
+    font-size: 2em;
+}
+
+.form-btn-container{
+    /* background-color: red; */
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
