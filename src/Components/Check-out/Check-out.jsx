@@ -7,13 +7,14 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 const CheckOut = () => {
   const [active, setActive] = useState(true);
   const { cart, totalPrice, clearCart } = CartContext();
-  const [user, setUser] = useState("");
+  const [idUser, setIduser] = useState("");
+  const [user, setUser] = useState({});
 
   const order = {
     buyer: {
-      name: "luke",
-      email: "luke@gmail.com",
-      phone: 1164034124,
+      name: user.username,
+      email: user.email,
+      phone: user.phone,
     },
     items: cart.map((prod) => ({
       id: prod.id,
@@ -28,17 +29,28 @@ const CheckOut = () => {
     const db = getFirestore();
     const orderCollection = collection(db, "orders");
     addDoc(orderCollection, order).then((result) => {
-      setUser(result.id);
+      setIduser(result.id);
     });
     setActive(!active);
     clearCart();
   };
 
-  // const openModal = () => {
-  //   setActive(!active);
-  // };
+  const openModal = () => {
+    setActive(!active);
+  };
 
-  // console.log("el codigo guardado es: " + user);
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setUser((values) => ({ ...values, [name]: value }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(user);
+  };
+
+  // console.log("el codigo guardado es: " + idUser);
   return (
     <div className="checkout-container">
       {active ? (
@@ -47,15 +59,18 @@ const CheckOut = () => {
             <h2>Complete data</h2>
             <h5>To confirm your purchase, please enter your data:</h5>
             <div className="form-container">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="items-start">
                   <div className="form-field">
                     <label className="form-label">Enter your name:</label>
                     <input
                       required
-                      className="form-input"
                       type="text"
-                      placeholder="name completed"
+                      name="username"
+                      className="form-input"
+                      placeholder="Username"
+                      value={user.username || ""}
+                      onChange={handleChange}
                     />
                   </div>
 
@@ -65,8 +80,11 @@ const CheckOut = () => {
                     <input
                       required
                       className="form-input"
+                      name="email"
                       type="email"
                       placeholder="Email"
+                      value={user.email || ""}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="form-field">
@@ -75,19 +93,25 @@ const CheckOut = () => {
                       required
                       className="form-input"
                       type="email"
-                      placeholder="Email"
+                      placeholder="Repeat your email"
                     />
                   </div>
-                  <div className="form-field" form="email">
-                    <label className="form-label">Enter your email:</label>
+                  <div className="form-field">
+                    <label className="form-label">Enter your phone:</label>
                     <input
                       required
                       className="form-input"
                       type="tel"
-                      placeholder="Number phono"
+                      name="phone"
+                      placeholder="Number phone"
+                      value={user.phone || ""}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
+                <button onClick={btnBuy} type="submit">
+                  confirm buy
+                </button>
               </form>
             </div>
           </div>
@@ -95,9 +119,6 @@ const CheckOut = () => {
             <Link to={"/cart"}>Go to cart</Link>
             <br />
             <br />
-            <button onClick={btnBuy} type="submit">
-              confirm buy
-            </button>
           </div>
         </>
       ) : (
@@ -108,9 +129,9 @@ const CheckOut = () => {
               we will send you an email when your order leaves our warehouse,
               your reference code is:
               <br />
-              <br />[{user}]
+              <br />[{idUser}]
             </p>
-            {/* <button onClick={openModal}>close</button> */}
+            <button onClick={openModal}>close</button>
             <Link to={"/"}>Back</Link>
           </div>
         </div>

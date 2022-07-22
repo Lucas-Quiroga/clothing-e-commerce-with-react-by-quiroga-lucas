@@ -44,6 +44,10 @@ const ItemDetail = ({ clothesObject }) => {
                 <Link id="aStyle" to={"/"}>
                   Return to catalog
                 </Link>
+
+                <Link to="/cart">
+                  <button>go to cart</button>
+                </Link>
               </>
             ) : (
               <ItemCount intial={1} stock={clothesObject.stock} onadd={onadd} />
