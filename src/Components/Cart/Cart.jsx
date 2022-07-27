@@ -17,39 +17,20 @@ const Cart = () => {
     }, 3000);
   }, []);
 
-  // const order = {
-  //   buyer: {
-  //     name: "luke",
-  //     email: "luke@gmail.com",
-  //     phone: 1164034124,
-  //   },
-  //   items: cart.map((prod) => ({
-  //     id: prod.id,
-  //     title: prod.title,
-  //     price: prod.price,
-  //     quantity: prod.quantity,
-  //   })),
-  //   total: totalPrice(),
-  // };
-
-  // const btnBuy = () => {
-  //   const db = getFirestore();
-  //   const orderCollection = collection(db, "orders");
-  //   addDoc(orderCollection, order).then(({ id }) => console.log(id));
-  // };
-
   if (cart.length === 0) {
     return (
-      <>
+      <div className="cart_noProducts">
         <p>There are no products</p>
-        <Link to="/">Go to catalog</Link>
-      </>
+        <Link to="/">
+          <button className="btn-detail">Go to catalog</button>
+        </Link>
+      </div>
     );
   }
   return (
-    <>
+    <div className="appDetail">
       {loading ? (
-        <div className="spinerC">
+        <div className="spinnerItem">
           <h2>Loading...</h2>
           <ClipLoader color={"#000000"} loading={loading} size={150} />
         </div>
@@ -57,8 +38,11 @@ const Cart = () => {
         cart.map((product) => <ItemCart key={product.id} product={product} />)
       )}
       <p className="p">The total of your purchase is: ${totalPrice()}</p>
-      <Link to={"/check-out"}>Go to CheckOut</Link>
-    </>
+
+      <Link to="/check-out">
+        <button className="btn-detail">Go to CheckOut</button>
+      </Link>
+    </div>
   );
 };
 export default Cart;

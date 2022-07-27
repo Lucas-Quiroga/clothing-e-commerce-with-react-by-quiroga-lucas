@@ -56,7 +56,7 @@ const ItemListContainer = ({ greeting }) => {
   return (
     <div className="landing">
       {loading ? (
-        <div className="spinerItemList">
+        <div className="spinnerItemListee">
           <h2>Loading...</h2>
           <ClipLoader color={"#000000"} loading={loading} size={150} />
         </div>

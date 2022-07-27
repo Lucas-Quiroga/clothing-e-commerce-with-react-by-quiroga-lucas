@@ -79,3 +79,14 @@ a{
   background: black;
   color: red;
 }
+
+@media only screen and (max-width: 767px){
+  nav ul{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex-basis: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}

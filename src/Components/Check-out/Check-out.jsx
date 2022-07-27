@@ -35,9 +35,9 @@ const CheckOut = () => {
     clearCart();
   };
 
-  const openModal = () => {
-    setActive(!active);
-  };
+  // const openModal = () => {
+  //   setActive(!active);
+  // };
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -108,14 +108,22 @@ const CheckOut = () => {
                     />
                   </div>
                 </div>
-                <button onClick={btnBuy} type="submit">
+                <button
+                  className="form-btn-container"
+                  onClick={btnBuy}
+                  type="submit"
+                >
                   confirm buy
                 </button>
               </form>
             </div>
           </div>
-          <div className="form-btn-container">
-            <Link to={"/cart"}>Go to cart</Link>
+          <div>
+            <Link to={"/cart"}>
+              <button className="form-btn-container" type="submit">
+                Go to cart
+              </button>
+            </Link>
             <br />
             <br />
           </div>

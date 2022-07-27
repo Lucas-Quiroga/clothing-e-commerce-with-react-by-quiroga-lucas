@@ -11,19 +11,11 @@ const NavBar = () => {
         </li>
         <li>
           <NavLink to="/category/male">Male</NavLink>
-          <ul className="menu-vertical">
-            {/* <li><NavLink to={}>T-shirt</NavLink></li>
-                <li><NavLink to={}>Pants</NavLink></li>
-                <li><NavLink to={}>Sneakers</NavLink></li> */}
-          </ul>
+          <ul className="menu-vertical"></ul>
         </li>
         <li>
           <NavLink to="/category/female">Female</NavLink>
-          <ul className="menu-vertical">
-            {/* <li><NavLink to={}>T-shirt</NavLink></li>
-                <li><NavLink to={}>Pants</NavLink></li>
-                <li><NavLink to={}>Sneakers</NavLink></li> */}
-          </ul>
+          <ul className="menu-vertical"></ul>
         </li>
         <li>
           <NavLink to="/cart">Cart</NavLink>
@@ -31,8 +23,10 @@ const NavBar = () => {
         <li>
           <NavLink to="/about">About</NavLink>
         </li>
+        <li>
+          <CartWidget />
+        </li>
       </ul>
-      <CartWidget />
     </nav>
   );
 };

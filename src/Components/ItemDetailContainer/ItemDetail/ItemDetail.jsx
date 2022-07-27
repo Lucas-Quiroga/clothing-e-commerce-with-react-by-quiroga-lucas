@@ -23,35 +23,39 @@ const ItemDetail = ({ clothesObject }) => {
   };
 
   return (
-    <div className="app">
+    <div className="appDetail">
       {loading ? (
-        <div className="spinerC">
+        <div className="spinnerItemListeee">
           <h2>Loading...</h2>
           <ClipLoader color={"#000000"} loading={loading} size={150} />
         </div>
       ) : (
-        <div className="detailObjContainer" key={clothesObject.id}>
-          <img src={clothesObject.pictureUrl} alt="" />
-          <div className="detailObjChildren">
-            <h3>{clothesObject.title}</h3>
-            <h4>Price: {clothesObject.price}</h4>
-            <h4>Description: {clothesObject.features}</h4>
-            {cart ? (
-              <>
-                <Link className="aStyle" to={"/cart"}>
-                  Go to cart
-                </Link>
-                <Link id="aStyle" to={"/"}>
-                  Return to catalog
-                </Link>
-
-                <Link to="/cart">
-                  <button>go to cart</button>
-                </Link>
-              </>
-            ) : (
-              <ItemCount intial={1} stock={clothesObject.stock} onadd={onadd} />
-            )}
+        <div className="detail_container">
+          <div className="detailObjContainer" key={clothesObject.id}>
+            <img src={clothesObject.pictureUrl} alt="" />
+            <div className="detailObjChildren">
+              <h3>{clothesObject.title}</h3>
+              <h4>Price: {clothesObject.price}</h4>
+              <h4>Description: {clothesObject.features}</h4>
+              {cart ? (
+                <div className="detail_containerChildren">
+                  <Link to="/">
+                    <button className="btn-detail">Return to catalog</button>
+                  </Link>
+                  <Link to="/cart">
+                    <button className="btn-detail">go to cart</button>
+                  </Link>
+                </div>
+              ) : (
+                <div className="detail_container">
+                  <ItemCount
+                    intial={1}
+                    stock={clothesObject.stock}
+                    onadd={onadd}
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}

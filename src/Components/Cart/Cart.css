@@ -3,3 +3,50 @@
     text-align: center;
     justify-content: center;
 }
+.appDetail{
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 767px){
+
+    .spinnerItemListeee{
+        height: 20px;
+        width: 20px;
+        /* margin-top: 10em; */
+        justify-content: center;
+        text-align: center;
+        right: 400em;
+        top: 11em;
+        position: relative;
+        padding-top: 22em;
+    }
+  
+    .spinnerItemListeee h2{
+      position: relative;
+      left: 0.7em;
+      padding-top: 22em;
+    }
+
+    .appDetail{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .spinnerItem{
+      padding: 9em;
+    }
+
+    .cart_noProducts{
+      margin: 0;
+      padding: 0;
+      position: relative;
+      top: 12em;
+    }
+
+    .cart_noProducts p{
+      font-size: 2em;
+      text-decoration: underline;
+    }
+  }

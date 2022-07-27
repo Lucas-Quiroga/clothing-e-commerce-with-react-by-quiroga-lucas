@@ -22,3 +22,26 @@
     50% {color: lightgray}
     100% {color: lightslategray}
   }
+
+  @media only screen and (max-width: 767px){
+    #spanLanding{
+      font-size: 1.5em;
+      top: 0.5em;
+    }
+    .spinnerItemListee{
+      height: 20px;
+      width: 20px;
+      /* margin-top: 10em; */
+      justify-content: center;
+      text-align: center;
+      left: 20em;
+      top: 11em;
+      position: relative;
+  }
+
+  .spinnerItemListee h2{
+    position: relative;
+    left: 0.7em;
+  }
+  
+}

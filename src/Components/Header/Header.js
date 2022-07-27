@@ -7,9 +7,13 @@ const Header = () => {
     <header>
       <img className="logo_header" src={logo} alt="logo de la tienda" />
       <h1>
-        <span>Your favorite vintage clothing in one place</span>
+        <span id="span_header">
+          Your favorite vintage clothing in one place
+        </span>
       </h1>
-      <NavBar />
+      <div className="nav">
+        <NavBar />
+      </div>
     </header>
   );
 };
