@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav className="nav-nav">
       <ul className="menu-horizontal">
         <li>
           <NavLink to="/">Home</NavLink>

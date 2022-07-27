@@ -1,6 +1,5 @@
 .componentCount{
     position: relative;
-    /* margin:  15em 45%; */
     border: 2px solid black;
     height: 9em;
     width: 14em;
@@ -34,7 +33,5 @@ cursor: pointer;
 }
 
 .btn-add:hover{
-    /* color: black;
-    background: white; */
     text-decoration: underline 2px solid white;
 }

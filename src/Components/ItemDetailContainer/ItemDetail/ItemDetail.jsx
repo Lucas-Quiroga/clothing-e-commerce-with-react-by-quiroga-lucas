@@ -5,6 +5,8 @@ import "./ItemDetailStyle.css";
 import { ClipLoader } from "react-spinners";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../../Context/CartContext";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ItemDetail = ({ clothesObject }) => {
   const [cart, setCart] = useState(false);
@@ -22,6 +24,10 @@ const ItemDetail = ({ clothesObject }) => {
     addItem({ quantity: quantityToAdd, ...clothesObject });
   };
 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div className="appDetail">
       {loading ? (
@@ -31,7 +37,11 @@ const ItemDetail = ({ clothesObject }) => {
         </div>
       ) : (
         <div className="detail_container">
-          <div className="detailObjContainer" key={clothesObject.id}>
+          <div
+            data-aos="fade-left"
+            className="detailObjContainer"
+            key={clothesObject.id}
+          >
             <img src={clothesObject.pictureUrl} alt="" />
             <div className="detailObjChildren">
               <h3>{clothesObject.title}</h3>

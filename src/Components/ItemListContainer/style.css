@@ -17,6 +17,13 @@
    animation: changeColor 3s ease-in infinite;
   }
 
+  .spinnerItemListee{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 20em;
+  }
+
   @keyframes changeColor{
     0% {color: lightblue;}
     50% {color: lightgray}

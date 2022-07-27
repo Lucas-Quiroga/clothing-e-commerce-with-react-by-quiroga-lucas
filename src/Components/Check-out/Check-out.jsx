@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Check-out.css";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const CheckOut = () => {
   const [active, setActive] = useState(true);
   const { cart, totalPrice, clearCart } = CartContext();
   const [idUser, setIduser] = useState("");
   const [user, setUser] = useState({});
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   const order = {
     buyer: {
@@ -35,10 +41,6 @@ const CheckOut = () => {
     clearCart();
   };
 
-  // const openModal = () => {
-  //   setActive(!active);
-  // };
-
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -51,10 +53,15 @@ const CheckOut = () => {
   };
 
   return (
-    <div className="checkout-container">
+    <div
+      className="checkout-container"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+    >
       {active ? (
         <>
-          <div className="asda">
+          <div>
             <h2>Complete data</h2>
             <h5>To confirm your purchase, please enter your data:</h5>
             <div className="form-container">
@@ -72,8 +79,6 @@ const CheckOut = () => {
                       onChange={handleChange}
                     />
                   </div>
-
-                  {/* <input type="submit" /> */}
                   <div className="form-field">
                     <label className="form-label">Enter your email:</label>
                     <input

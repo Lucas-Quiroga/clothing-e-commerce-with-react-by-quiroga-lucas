@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./style.css";
 import ItemList from "./ItemList/ItemList";
-// import clothesJson from "./clothes.json";
 import { ClipLoader } from "react-spinners";
 import {
   getFirestore,
@@ -13,12 +12,6 @@ import {
 } from "firebase/firestore";
 
 const ItemListContainer = ({ greeting }) => {
-  // const promiseClothes = new Promise((resolve, reject) => {
-  //   setTimeout(() => {
-  //     resolve(clothesJson);
-  //   }, 2000);
-  // });
-
   const [clothing, setClothing] = useState([]);
   const [loading, setLoading] = useState(false);
 

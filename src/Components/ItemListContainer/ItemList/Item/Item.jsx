@@ -1,10 +1,16 @@
 import React from "react";
 import "./Item.css";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Item = ({ item }) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <div className="card">
+    <div data-aos="zoom-in" className="card">
       <h2 className="card-title">{item.title}</h2>
       <img className="card-img" src={item.pictureUrl} alt="" />
       <h4>Price: {item.price}</h4>

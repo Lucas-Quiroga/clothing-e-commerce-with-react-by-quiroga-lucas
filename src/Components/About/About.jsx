@@ -10,12 +10,21 @@ import "aos/dist/aos.css";
 
 const About = () => {
   const [loading, setLoading] = useState(false);
+  const [dialogue, setDialogue] = useState(true);
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 2000);
   }, []);
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
+  const nextDialog = () => {
+    setDialogue(!dialogue);
+  };
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -29,21 +38,62 @@ const About = () => {
           <ClipLoader color={"#000000"} loading={loading} size={150} />
         </div>
       ) : (
-        <div className="aboutContainer">
-          <h1 style={{ color: "black" }}>
-            In this section I will tell you about my experience in react, but I
-            am still learning.
-          </h1>
-          <br />
-          <br />
-          <img
-            data-aos="fade-right"
-            className="imgProfile"
-            src={profilePhoto}
-            alt=""
-            srcset=""
-          />
-          <img data-aos="fade-left" className="imgDialog" src={dialog} alt="" />
+        <div className="dialogee">
+          {dialogue ? (
+            <div className="aboutContainer">
+              <br />
+              <img
+                data-aos="fade-right"
+                className="imgProfile"
+                src={profilePhoto}
+                alt=""
+              />
+              <div className="img_text">
+                <img
+                  data-aos="fade-left"
+                  className="imgDialog"
+                  src={dialog}
+                  alt=""
+                />
+                <p data-aos="fade-left" className="p_about">
+                  Hi, my experience with react was very good! <br />I found it a
+                  very useful tool when developing!
+                  <br />
+                  <br />I really liked the idea of being able to reuse
+                  components.
+                  <br />
+                  <button onClick={nextDialog}>next</button>
+                </p>
+              </div>
+
+              <p data-aos="fade-left" className="p_about"></p>
+            </div>
+          ) : (
+            <div className="aboutContainer">
+              <br />
+              <img
+                data-aos="fade-right"
+                className="imgProfile"
+                src={profilePhoto}
+                alt=""
+              />
+              <div className="img_text">
+                <img
+                  data-aos="fade-left"
+                  className="imgDialog"
+                  src={dialog}
+                  alt=""
+                />
+                <p data-aos="fade-left" className="p_about">
+                  I will continue to learn this Javascript library to create
+                  better user interfaces.
+                  <br />
+                  <br />
+                  <button onClick={nextDialog}>back</button>
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </>

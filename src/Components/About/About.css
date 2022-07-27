@@ -2,14 +2,40 @@
     height: 30em;
     width: 30em;
     position: relative;
-    right: 30em;
-    top: 20em;
+    left: 4;
+    top: 14em;
 }
 
 .imgDialog{
     height: 30em;
     width: 60em;
-    position: absolute;
     left: 50em;
-    bottom: 22em;
+    bottom: 20em;
+}
+
+.spinerC{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 20em;
+}
+
+.img_text{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.p_about{
+    position: absolute;
+    top: 2em;
+    left: 2.2em;
+    right: 1.9em;
+    font-size: 2em;
+    height: 5em;
+}
+
+.aboutContainer{
+    padding-top: 6em;
 }

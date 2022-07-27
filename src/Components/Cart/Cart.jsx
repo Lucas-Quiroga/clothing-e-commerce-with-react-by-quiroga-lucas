@@ -4,7 +4,6 @@ import { ClipLoader } from "react-spinners";
 import { CartContext } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 import ItemCart from "../ItemCart/ItemCart";
-// import { addDoc, collection, getFirestore } from "firebase/firestore";
 import "./Cart.css";
 
 const Cart = () => {
@@ -35,13 +34,17 @@ const Cart = () => {
           <ClipLoader color={"#000000"} loading={loading} size={150} />
         </div>
       ) : (
-        cart.map((product) => <ItemCart key={product.id} product={product} />)
-      )}
-      <p className="p">The total of your purchase is: ${totalPrice()}</p>
+        <>
+          {cart.map((product) => (
+            <ItemCart key={product.id} product={product} />
+          ))}
+          <p className="p">The total of your purchase is: ${totalPrice()}</p>
 
-      <Link to="/check-out">
-        <button className="btn-detail">Go to CheckOut</button>
-      </Link>
+          <Link to="/check-out">
+            <button className="btn-detail">Go to CheckOut</button>
+          </Link>
+        </>
+      )}
     </div>
   );
 };

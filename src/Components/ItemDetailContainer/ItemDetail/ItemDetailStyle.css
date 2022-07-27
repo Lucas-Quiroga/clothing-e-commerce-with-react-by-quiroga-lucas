@@ -5,7 +5,6 @@
     margin: 10px 25em;
     position: relative;
     top: 10em;
-    /* box-sizing: content-box; */
 }
 
 .detailObjChildren{
@@ -36,28 +35,9 @@
     position: absolute;
 }
 
-/* #aStyle{
-
-  outline: none;
-  text-decoration: underline;
-  display: inline-block;
-  width: 50%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 1;
-  color: black;
-  padding-top: 3em;
-} */
-
 #aStyle:hover{
     color: red;
 }
-/* 
-.detail_container{
-    height: 50%;
-    width: 50%;
-    box-sizing: border-box;
-} */
 
 .btn-detail{
     cursor: pointer;
@@ -79,6 +59,13 @@
     margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.spinnerItemListeee{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 20em;
 }
 
 @media only screen and (max-width: 767px){

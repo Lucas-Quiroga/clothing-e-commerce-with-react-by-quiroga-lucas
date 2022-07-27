@@ -5,6 +5,9 @@
     text-align: center;
   }  
 
+    .nav-nav{
+      padding-top: 1px;
+    }
 
   li {
     list-style: none;
