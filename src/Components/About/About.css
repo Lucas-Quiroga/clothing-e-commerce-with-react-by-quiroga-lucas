@@ -1,0 +1,15 @@
+.imgProfile{
+    height: 30em;
+    width: 30em;
+    position: relative;
+    right: 30em;
+    top: 20em;
+}
+
+.imgDialog{
+    height: 30em;
+    width: 60em;
+    position: absolute;
+    left: 50em;
+    bottom: 22em;
+}

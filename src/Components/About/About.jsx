@@ -1,8 +1,12 @@
 import React from "react";
-import SvgLogo from "../../assets/svgicon2.svg";
 import { useEffect } from "react";
 import { useState } from "react";
 import { ClipLoader } from "react-spinners";
+import profilePhoto from "../../assets/profile.jpeg";
+import dialog from "../../assets/dialogo.jpg";
+import "./About.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
   const [loading, setLoading] = useState(false);
@@ -10,7 +14,11 @@ const About = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
+  }, []);
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
   }, []);
 
   return (
@@ -28,7 +36,14 @@ const About = () => {
           </h1>
           <br />
           <br />
-          <img src={SvgLogo} alt="" srcset="" />
+          <img
+            data-aos="fade-right"
+            className="imgProfile"
+            src={profilePhoto}
+            alt=""
+            srcset=""
+          />
+          <img data-aos="fade-left" className="imgDialog" src={dialog} alt="" />
         </div>
       )}
     </>
