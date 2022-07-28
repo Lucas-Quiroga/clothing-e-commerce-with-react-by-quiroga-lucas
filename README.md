@@ -2,6 +2,10 @@
 
 The project is based on a dynamic and friendly user interface for the sale of products.
 
+## Preview image 👁
+
+![ScreenShot](/public/website.jpg)
+
 ## Deployment 📦
 
 - [E-commerce](https://e-commerce-quiroga-lucas.netlify.app/) - Website
@@ -23,4 +27,4 @@ This project is licensed © LUCAS QUIROGA 2022, all rights reserved.
 
 ## Acknowledgments 🎁
 
-my thanks to all the coder-house team, the teacher and tutors and the coordinator for making this experience fun and enjoyable, and for being part of my professional career and my development as a programmer.
+My thanks to all the coder-house team, the teacher and tutors and the coordinator for making this experience fun and enjoyable, and for being part of my professional career and my development as a programmer.
