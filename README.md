@@ -1,19 +1,26 @@
-# Clothing E-commerce
+# Clothing E-commerce ⚛
 
 The project is based on a dynamic and friendly user interface for the sale of products.
 
-## Built With
+## Deployment 📦
 
-At the moment the following tools:
+- [E-commerce](https://e-commerce-quiroga-lucas.netlify.app/) - Website
 
-* [REACT SPINNERS](https://www.davidhu.io/react-spinners/) - For loading screen
-* [React Router](https://reactrouter.com/docs/en/v6) - For navigation
+## Built With 🛠️
 
-## Authors
+- [REACT SPINNERS](https://www.davidhu.io/react-spinners/) - For loading screen
+- [React Router](https://reactrouter.com/docs/en/v6) - For navigation
+- [Animate On Scroll Library](https://michalsnik.github.io/aos/) - For animation
+- [Firebase](https://firebase.google.com/) - For database
 
-* **Lucas Quiroga** - *Initial work* - [Lucas Quiroga](https://github.com/Lucas-Quiroga)
+## Authors ✒️
 
-## License
+- **Lucas Quiroga** - _Initial work_ - [Lucas Quiroga](https://github.com/Lucas-Quiroga)
+
+## License 📄
 
 This project is licensed © LUCAS QUIROGA 2022, all rights reserved.
 
+## Acknowledgments 🎁
+
+my thanks to all the coder-house team, the teacher and tutors and the coordinator for making this experience fun and enjoyable, and for being part of my professional career and my development as a programmer.
